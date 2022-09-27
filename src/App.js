@@ -1,7 +1,7 @@
 import React,{Fragment, useState, useEffect} from 'react';
 import Header from './components/Header';
 import Formulario from './components/Formulario';
-
+import ListaNoticias from './components/ListaNoticias';
 
 function App() {
   const [categoria, setCategoria] = useState('');
@@ -27,6 +27,9 @@ function App() {
     <div className="container">
       <Formulario
       setCategoria={setCategoria}
+      />
+      <ListaNoticias
+        noticias={noticias}
       />
     </div>
     </Fragment>

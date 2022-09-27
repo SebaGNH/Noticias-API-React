@@ -1,8 +1,19 @@
 import React from 'react'
+import Noticia from './Noticia'
 
-const ListaNoticias = () => {
+const ListaNoticias = ({noticias}) => {
   return (
-    <div>ListaNoticias</div>
+    <div className='row'>
+      {
+        noticias.map( (noticia, idx) => (
+          <div key={idx}>
+            <Noticia 
+              noticia={noticia}
+            />
+          </div>
+        ))
+      }
+    </div>
   )
 }
 
